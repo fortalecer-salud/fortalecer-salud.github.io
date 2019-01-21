@@ -1,7 +1,7 @@
 var solicServicio = [
     {   id:1,
         title:'1. Contáctanos',
-        text:'Llámanos al <strong>+54 911-2713-1252</strong>, cuéntanos acerca del paciente, cuales son sus necesidades, los cuidados que requiere y sus pasatiempos.',
+        text:'Llámanos al <strong>1164121226</strong>, cuéntanos acerca del paciente, cuales son sus necesidades, los cuidados que requiere y sus pasatiempos.',
         srcImage:'./images/atencion-cliente.png',
         position:'',
         bgColor:'#fff'
