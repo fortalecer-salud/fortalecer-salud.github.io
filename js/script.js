@@ -1,14 +1,14 @@
 $(document).ready(function () {
     //Animate
-    $('.header__link').on('click', function(e) {
-        e.preventDefault();
-        $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top -70}, 800, 'linear');
-    });
+    // $('.header__link').on('click', function(e) {
+    //     e.preventDefault();
+    //     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top -70}, 800, 'linear');
+    // });
     $('#btnContacto').on('click',function(e){
         e.preventDefault();
         $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top -70}, 800, 'linear');
     })
-    $('.menu__dropdown--item a').on('click',function(e){
+    $('.ancla').on('click',function(e){
         e.preventDefault();
         $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top -60}, 800, 'linear');
     })
@@ -91,46 +91,5 @@ $(document).ready(function () {
     })
     $(".menu__dropdown--header").click(function () {
         $("#menuMobile, body").toggleClass("active");
-    })
-
-    //Elements
-    $("#fullName").on('focus',onFocus);
-    $("#email").on('focus',onFocus);
-    $("#message").on('focus',onFocus);
-    $("#fullName").on('blur',onBlur);
-    $("#email").on('blur',onBlur);
-    $("#message").on('blur',onBlur);
-    //Form Contact
-    $('#form-contact').on("submit", function(e) {
-        e.preventDefault();
-        const dataForm = {
-            fullName: $('#fullName').val(),
-            email: $('#email').val(),
-            message:$('#message').val()
-        }
-        // if (!validarInputs()) {
-        //     console.log('Falto validar los Input');
-        //     e.preventDefault();
-        //     return false;
-        // } else {
-            $.ajax({
-                method: "POST",
-                url: "https://formspree.io/infofortalecer@gmail.com",
-                data: $('#contact-form').serialize(),
-                data:dataForm,
-                dataType: "json"
-            });
-            alert("Su mensaje fue enviado satisfactoriamente\nGracias!");
-            console.log('Envia');
-            $('#form-contact')[0].reset();
-        // }
-    });
-
-    // Modal Términos
-    $('#tyc').click(function(){
-        $('#modal').addClass('open');
-    })
-    $('.close').click(function(){
-        $('#modal').removeClass('open');
     })
 });
